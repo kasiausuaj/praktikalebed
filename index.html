@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socks</title>
+    <link rel="stylesheet" href="/css/main.css">
     <script defer src="/vue/vue.js"></script>
     <script defer src="/vue/main.js"></script>
 </head>
 <body>
     <div id="app">
-        <h1> {{ product }}</h1>
-        <p> {{ desc }}</p>
-    </div>
+        <div class="product">
+
+            <div class="product-image">
+                <img v-bind:alt="altText" v-bind:src="image"/>
+            </div>
+
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+            </div>
+            <a v-bind:href="link"> {{ linkText }}</a>
+        </div>
+     </div>
 </body>
 </html>
